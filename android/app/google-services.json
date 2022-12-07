@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "609588306851",
+    "project_id": "prostuti-812cb",
+    "storage_bucket": "prostuti-812cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609588306851:android:b520003d849d3b972a3016",
+        "android_client_info": {
+          "package_name": "com.prostuti.contest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609588306851-p6hicg09qrptpobrs6b453vkrqqc6ct5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt5lvValOU4LcfYWnLZQ7iI5mblu3o8jE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "609588306851-p6hicg09qrptpobrs6b453vkrqqc6ct5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
