@@ -85,8 +85,7 @@ class Registration extends StatelessWidget {
                         children: [
                           CachedNetworkImage(
                             imageUrl: data['full_institution_logo_path'],
-                            imageBuilder: (context, imageProvider) =>
-                                CircleAvatar(
+                            imageBuilder: (context, imageProvider) => CircleAvatar(
                               radius: 10.w,
                               backgroundColor: Colors.orange,
                               child: CircleAvatar(
@@ -95,19 +94,14 @@ class Registration extends StatelessWidget {
                                 backgroundImage: imageProvider,
                               ),
                             ),
-                            placeholder: (context, url) =>
-                                CircularProgressIndicator(),
+                            placeholder: (context, url) => CircularProgressIndicator(),
                             errorWidget: (context, url, error) => CircleAvatar(
                               radius: 10.w,
                               backgroundColor: Colors.indigo.shade400,
                               child: CircleAvatar(
                                 radius: 9.w,
                                 backgroundColor: Colors.white,
-                                backgroundImage: CachedNetworkImageProvider(
-                                    "https://ui-avatars.com/api/?name=" +
-                                        data['institution_name']
-                                            .replaceAll("+", " ") +
-                                        ".png"),
+                                backgroundImage: CachedNetworkImageProvider("https://ui-avatars.com/api/?name=" + data['institution_name'].replaceAll("+", " ") + ".png"),
                               ),
                             ),
                             fit: BoxFit.cover,
@@ -219,9 +213,7 @@ class Registration extends StatelessWidget {
                           onCh: (value) {
                             loginCont.professionChanged(value);
                           },
-                          selectedItem: loginCont.selectedProfession.value != ""
-                              ? loginCont.selectedProfession.value
-                              : null,
+                          selectedItem: loginCont.selectedProfession.value != "" ? loginCont.selectedProfession.value : null,
                         );
                       },
                     ),
@@ -230,8 +222,7 @@ class Registration extends StatelessWidget {
                   if (loginCont.districtsDropList != null)
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 8.w),
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 15, vertical: 1),
+                      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 1),
                       decoration: BoxDecoration(
                         color: Color(0xFFEAEAEA),
                         border: Border.all(color: Colors.indigo),
@@ -244,9 +235,7 @@ class Registration extends StatelessWidget {
                           onCh: (value) {
                             loginCont.districtChanged(value);
                           },
-                          selectedItem: loginCont.selectedDistrict.value != ""
-                              ? loginCont.selectedDistrict.value
-                              : null,
+                          selectedItem: loginCont.selectedDistrict.value != "" ? loginCont.selectedDistrict.value : null,
                         ),
                       ),
                     ),
@@ -269,7 +258,7 @@ class Registration extends StatelessWidget {
                     ),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF07013F),
+                        backgroundColor: Color(0xFF07013F),
                         //shadowColor: Colors.blue,
                         padding: EdgeInsets.symmetric(vertical: 10.sp),
                         shape: RoundedRectangleBorder(

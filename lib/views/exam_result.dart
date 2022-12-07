@@ -27,8 +27,7 @@ class ExamResult extends StatelessWidget {
           children: [
             Expanded(
               child: Obx(() {
-                if (resultEventCont.resultEvents.isNotEmpty &&
-                    resultEventCont.resultEvents[0].isNotEmpty) {
+                if (resultEventCont.resultEvents.isNotEmpty && resultEventCont.resultEvents[0].isNotEmpty) {
                   return RefreshIndicator(
                     onRefresh: () => resultEventCont.getEventResult(),
                     backgroundColor: Color(0x05000000),
@@ -38,8 +37,7 @@ class ExamResult extends StatelessWidget {
                         minHeight: 100.h,
                       ),
                       child: ListView.builder(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 20.sp, horizontal: 10.sp),
+                        padding: EdgeInsets.symmetric(vertical: 20.sp, horizontal: 10.sp),
                         // physics: ClampingScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: resultEventCont.resultEvents.length,
@@ -80,7 +78,7 @@ class ExamResult extends StatelessWidget {
                               ),
                               trailing: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  primary: Colors.black,
+                                  backgroundColor: Colors.black,
                                 ),
                                 child: Text(
                                   "Result",
@@ -119,10 +117,9 @@ class ExamResult extends StatelessWidget {
                                     SizedBox(height: 2.h),
                                     ElevatedButton.icon(
                                       style: ElevatedButton.styleFrom(
-                                        primary: Colors.orange,
+                                        backgroundColor: Colors.orange,
                                       ),
-                                      onPressed: () =>
-                                          resultEventCont.getEventResult(),
+                                      onPressed: () => resultEventCont.getEventResult(),
                                       icon: Icon(Icons.refresh),
                                       label: Text("Refresh"),
                                     ),

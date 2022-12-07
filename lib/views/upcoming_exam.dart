@@ -124,7 +124,7 @@ class UpComingExam extends StatelessWidget {
                       children: [
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.transparent,
+                            backgroundColor: Colors.transparent,
                           ),
                           onPressed: btnSt == "Start Now"
                               ? () async {

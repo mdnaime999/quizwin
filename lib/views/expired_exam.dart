@@ -18,8 +18,7 @@ class ExpiredExam extends StatelessWidget {
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title:
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        title: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           IconButton(
             onPressed: () {
               Get.back();
@@ -49,8 +48,7 @@ class ExpiredExam extends StatelessWidget {
         children: [
           Expanded(
             child: Obx(() {
-              if (expiredCont.expiredevent.isNotEmpty &&
-                  expiredCont.expiredevent[0].isNotEmpty) {
+              if (expiredCont.expiredevent.isNotEmpty && expiredCont.expiredevent[0].isNotEmpty) {
                 return ListView.builder(
                   // reverse: true,
                   itemCount: expiredCont.expiredevent.length,
@@ -71,8 +69,7 @@ class ExpiredExam extends StatelessWidget {
                     }
 
                     return Container(
-                      margin: EdgeInsets.only(
-                          left: 20.sp, right: 20.sp, bottom: 10.sp),
+                      margin: EdgeInsets.only(left: 20.sp, right: 20.sp, bottom: 10.sp),
                       padding: EdgeInsets.all(10.sp),
                       decoration: BoxDecoration(
                         color: Color(0xff282449).withOpacity(0.8),
@@ -145,7 +142,7 @@ class ExpiredExam extends StatelessWidget {
 
                               ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  primary: Colors.transparent,
+                                  backgroundColor: Colors.transparent,
                                 ),
                                 onPressed: btnSt == "Start"
                                     ? () {

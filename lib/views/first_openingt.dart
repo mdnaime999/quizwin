@@ -114,7 +114,7 @@ class FirstOpening extends StatelessWidget {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.all(10.sp),
-                      primary: Colors.indigo[800],
+                      backgroundColor: Colors.indigo[800],
                       textStyle: TextStyle(
                         fontSize: 15.sp,
                       )),

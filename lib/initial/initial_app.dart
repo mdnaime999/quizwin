@@ -160,8 +160,7 @@ class InitialApp extends GetxController with GetSingleTickerProviderStateMixin {
   }
 
   void checkUserStatus() async {
-    final Uri url =
-        Uri.parse(AppConst().baseLink + AppConst().checkUserStatusUri);
+    final Uri url = Uri.parse(AppConst().baseLink + AppConst().checkUserStatusUri);
     final headers = {
       'Accept': 'application/json',
       "Authorization": "Bearer " + authdb.get(0).toString(),
@@ -349,9 +348,7 @@ class InitialApp extends GetxController with GetSingleTickerProviderStateMixin {
       customerName: payName.text,
       customerPhone: payPhone.text,
       customerEmail: payEmail.text,
-      customerAddress: instInfo.isNotEmpty
-          ? "${instInfo['upazila']['upazila_name']} , ${instInfo['district']['district_name']}"
-          : "null",
+      customerAddress: instInfo.isNotEmpty ? "${instInfo['upazila']['upazila_name']} , ${instInfo['district']['district_name']}" : "null",
       customerCity: null,
       customerState: null,
       customerPostcode: null,
@@ -365,8 +362,7 @@ class InitialApp extends GetxController with GetSingleTickerProviderStateMixin {
       value4: null,
     );
     ShurjopaySdk shurjopaySdk = ShurjopaySdk(
-      onSuccess: (BuildContext context, TransactionInfo? transactionInfo,
-          ErrorSuccess errorSuccess) async {
+      onSuccess: (BuildContext context, TransactionInfo? transactionInfo, ErrorSuccess errorSuccess) async {
         print(transactionInfo);
         print("DEBUG_LOG_PRINT: onSuccess");
         if (transactionInfo != null) {
@@ -425,8 +421,7 @@ class InitialApp extends GetxController with GetSingleTickerProviderStateMixin {
       radius: 10.sp,
       contentPadding: EdgeInsets.symmetric(vertical: 5.h),
       content: Container(
-        decoration:
-            BoxDecoration(border: Border(top: BorderSide(color: Colors.grey))),
+        decoration: BoxDecoration(border: Border(top: BorderSide(color: Colors.grey))),
         child: Padding(
           padding: EdgeInsets.all(10.sp),
           child: Column(
@@ -444,7 +439,7 @@ class InitialApp extends GetxController with GetSingleTickerProviderStateMixin {
       ),
       confirm: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: Colors.black,
+          backgroundColor: Colors.black,
         ),
         onPressed: () {
           getEvents();
@@ -459,8 +454,7 @@ class InitialApp extends GetxController with GetSingleTickerProviderStateMixin {
   Future<bool> eventPaymentStatus(eventid) async {
     bool payStatus = false;
     var auth = Get.find<LoginCont>().auth2;
-    final Uri url =
-        Uri.parse(AppConst().baseLink + AppConst().eventPaymentStatus);
+    final Uri url = Uri.parse(AppConst().baseLink + AppConst().eventPaymentStatus);
     final headers = {
       'Accept': 'application/json',
       "Authorization": "Bearer " + auth[0].toString(),

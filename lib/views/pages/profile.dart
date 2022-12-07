@@ -121,7 +121,7 @@ class Profile extends StatelessWidget {
                             ),
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                primary: profileController.regCard == null ? Colors.orange.shade700 : Colors.green,
+                                backgroundColor: profileController.regCard == null ? Colors.orange.shade700 : Colors.green,
                                 // elevation: 5,
                                 // shadowColor: Colors.blue,
                                 padding: EdgeInsets.symmetric(vertical: 10.sp),

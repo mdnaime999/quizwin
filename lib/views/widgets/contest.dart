@@ -41,9 +41,7 @@ class ContestPage extends StatelessWidget {
               //   btnSt = "Update Profile";
               // }
 
-              if (exItem['event_type'] == 'paid' &&
-                  exItem['payst'] == false &&
-                  !cDate.isAfter(eEndDate)) {
+              if (exItem['event_type'] == 'paid' && exItem['payst'] == false && !cDate.isAfter(eEndDate)) {
                 btnSt = "Registration";
               }
               // print(exItem);
@@ -111,7 +109,7 @@ class ContestPage extends StatelessWidget {
                       children: [
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.black,
+                            backgroundColor: Colors.black,
                           ),
                           onPressed: btnSt == "Start Now"
                               ? () {
@@ -174,7 +172,7 @@ class ContestPage extends StatelessWidget {
                           SizedBox(height: 2.h),
                           ElevatedButton.icon(
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.orange,
+                              backgroundColor: Colors.orange,
                             ),
                             onPressed: () => intApp.getEvents(),
                             icon: Icon(Icons.refresh),

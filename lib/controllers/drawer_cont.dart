@@ -70,7 +70,7 @@ class DrawerCont extends GetxController {
                   child: ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.all(10.sp),
-                      primary: AppConst.backgroundColor,
+                      backgroundColor: AppConst.backgroundColor,
                     ),
                     onPressed: () => pickImage(context, ImageSource.camera),
                     icon: Icon(Icons.camera),
@@ -84,7 +84,7 @@ class DrawerCont extends GetxController {
                   child: ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.all(10.sp),
-                      primary: AppConst.backgroundColor,
+                      backgroundColor: AppConst.backgroundColor,
                     ),
                     onPressed: () => pickImage(context, ImageSource.gallery),
                     icon: Icon(Icons.photo),
@@ -262,7 +262,7 @@ class DrawerCont extends GetxController {
           ),
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              primary: regCard == null ? Colors.orange.shade700 : Colors.green,
+              backgroundColor: regCard == null ? Colors.orange.shade700 : Colors.green,
               // elevation: 5,
               // shadowColor: Colors.blue,
               padding: EdgeInsets.symmetric(vertical: 10.sp),

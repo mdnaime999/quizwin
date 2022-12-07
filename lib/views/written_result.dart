@@ -18,8 +18,7 @@ class WrittenResult extends StatelessWidget {
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title:
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        title: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           IconButton(
             onPressed: () {
               Get.back();
@@ -40,8 +39,7 @@ class WrittenResult extends StatelessWidget {
         ]),
       ),
       body: Obx(() {
-        if (writtenResultCont.writtenAllResult.isNotEmpty &&
-            writtenResultCont.writtenAllResult[0].isNotEmpty) {
+        if (writtenResultCont.writtenAllResult.isNotEmpty && writtenResultCont.writtenAllResult[0].isNotEmpty) {
           return ListView.builder(
             padding: EdgeInsets.all(10.sp),
             // physics: ClampingScrollPhysics(),
@@ -84,7 +82,7 @@ class WrittenResult extends StatelessWidget {
                   ),
                   trailing: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.transparent,
+                      backgroundColor: Colors.transparent,
                     ),
                     child: Text(
                       "Result",

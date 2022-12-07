@@ -16,16 +16,14 @@ class ExpiredPage extends StatelessWidget {
       children: [
         Expanded(
           child: Obx(() {
-            if (expiredCont.expiredevent.isNotEmpty &&
-                expiredCont.expiredevent[0].isNotEmpty) {
+            if (expiredCont.expiredevent.isNotEmpty && expiredCont.expiredevent[0].isNotEmpty) {
               return RefreshIndicator(
                 onRefresh: () => expiredCont.getEvents(),
                 backgroundColor: Color(0x05000000),
                 color: AppConst.tabText,
                 child: ListView.builder(
                   // reverse: true,
-                  padding:
-                      EdgeInsets.symmetric(vertical: 20.sp, horizontal: 10.sp),
+                  padding: EdgeInsets.symmetric(vertical: 20.sp, horizontal: 10.sp),
                   itemCount: expiredCont.expiredevent.length,
                   itemBuilder: (context, index) {
                     var exItem = expiredCont.expiredevent[index];
@@ -117,7 +115,7 @@ class ExpiredPage extends StatelessWidget {
 
                               ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  primary: Colors.transparent,
+                                  backgroundColor: Colors.transparent,
                                 ),
                                 onPressed: btnSt == "Start"
                                     ? () {
@@ -159,7 +157,7 @@ class ExpiredPage extends StatelessWidget {
                                 SizedBox(height: 2.h),
                                 ElevatedButton.icon(
                                   style: ElevatedButton.styleFrom(
-                                    primary: Colors.orange,
+                                    backgroundColor: Colors.orange,
                                   ),
                                   onPressed: () => expiredCont.getEvents(),
                                   icon: Icon(Icons.refresh),

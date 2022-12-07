@@ -146,13 +146,14 @@ class StartWritten extends StatelessWidget {
                         alignment: Alignment.center,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
+                            foregroundColor: Colors.white,
+                            backgroundColor: Colors.blue[900],
                             padding: EdgeInsets.symmetric(
                               horizontal: 30.sp,
                               vertical: 10.sp,
                             ),
-                            primary: Colors.blue[900],
-                            onPrimary: Colors.white,
-                            onSurface: Colors.grey,
+                            disabledForegroundColor: Colors.grey.withOpacity(0.38),
+                            disabledBackgroundColor: Colors.grey.withOpacity(0.12),
                             textStyle: TextStyle(
                               fontSize: 15.sp,
                             ),

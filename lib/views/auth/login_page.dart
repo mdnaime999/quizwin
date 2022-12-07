@@ -102,8 +102,7 @@ class LoginPage extends StatelessWidget {
                         // Number field
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: 20.sp),
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 15.sp, vertical: 1.sp),
+                          padding: EdgeInsets.symmetric(horizontal: 15.sp, vertical: 1.sp),
                           decoration: BoxDecoration(
                             color: Color(0xFFEAEAEA),
                             // border: Border.all(color: Colors.orange),
@@ -165,7 +164,7 @@ class LoginPage extends StatelessWidget {
                           ),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.green.shade800,
+                              backgroundColor: Colors.green.shade800,
                               // elevation: 5,
                               shadowColor: Colors.blue,
                               padding: EdgeInsets.symmetric(vertical: 10.sp),
@@ -215,7 +214,7 @@ class LoginPage extends StatelessWidget {
                           // ),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: Color(0xFF07013F),
+                              backgroundColor: Color(0xFF07013F),
                               shadowColor: Colors.blue,
                               padding: EdgeInsets.symmetric(vertical: 10.sp),
                               shape: RoundedRectangleBorder(

@@ -42,11 +42,10 @@ class Updater extends StatelessWidget {
                         alignment: Alignment.centerRight,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.indigo[900],
+                            backgroundColor: Colors.indigo[900],
                           ),
                           onPressed: () async {
-                            final Uri appUrl =
-                                Uri.parse('https://play.google.com/store/apps/details?id=${loginController.appInfo.value.packageName}');
+                            final Uri appUrl = Uri.parse('https://play.google.com/store/apps/details?id=${loginController.appInfo.value.packageName}');
                             if (!await launchUrl(appUrl)) {
                               throw 'Could not launch $appUrl';
                             }

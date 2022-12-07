@@ -30,15 +30,13 @@ class Notice extends StatelessWidget {
           children: [
             Expanded(
               child: Obx(() {
-                if (noticeCont.allNotices.isNotEmpty &&
-                    noticeCont.allNotices[0].isNotEmpty) {
+                if (noticeCont.allNotices.isNotEmpty && noticeCont.allNotices[0].isNotEmpty) {
                   return RefreshIndicator(
                     onRefresh: () => noticeCont.getAllNotice(),
                     backgroundColor: Color(0x05000000),
                     color: AppConst.tabText,
                     child: ListView.builder(
-                      padding: EdgeInsets.symmetric(
-                          vertical: 20.sp, horizontal: 10.sp),
+                      padding: EdgeInsets.symmetric(vertical: 20.sp, horizontal: 10.sp),
                       shrinkWrap: true,
                       // physics: BouncingScrollPhysics(),
                       itemCount: noticeCont.allNotices.length,
@@ -60,12 +58,8 @@ class Notice extends StatelessWidget {
                                       width: 100.w,
                                       child: notice['medias'].length > 0
                                           ? CachedNetworkImage(
-                                              imageUrl: notice['medias']
-                                                      [itemIndex]
-                                                  ['full_notice_media_path'],
-                                              imageBuilder:
-                                                  (context, imageProvider) =>
-                                                      Container(
+                                              imageUrl: notice['medias'][itemIndex]['full_notice_media_path'],
+                                              imageBuilder: (context, imageProvider) => Container(
                                                 decoration: BoxDecoration(
                                                   image: DecorationImage(
                                                     image: imageProvider,
@@ -73,12 +67,8 @@ class Notice extends StatelessWidget {
                                                   ),
                                                 ),
                                               ),
-                                              placeholder: (context, url) => Center(
-                                                  child:
-                                                      CircularProgressIndicator()),
-                                              errorWidget:
-                                                  (context, url, error) =>
-                                                      Container(
+                                              placeholder: (context, url) => Center(child: CircularProgressIndicator()),
+                                              errorWidget: (context, url, error) => Container(
                                                 decoration: BoxDecoration(
                                                   color: Colors.grey,
                                                 ),
@@ -159,10 +149,9 @@ class Notice extends StatelessWidget {
                                     SizedBox(height: 2.h),
                                     ElevatedButton.icon(
                                       style: ElevatedButton.styleFrom(
-                                        primary: Colors.orange,
+                                        backgroundColor: Colors.orange,
                                       ),
-                                      onPressed: () =>
-                                          noticeCont.getAllNotice(),
+                                      onPressed: () => noticeCont.getAllNotice(),
                                       icon: Icon(Icons.refresh),
                                       label: Text("Refresh"),
                                     ),

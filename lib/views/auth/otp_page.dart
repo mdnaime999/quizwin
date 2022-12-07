@@ -172,7 +172,7 @@ class OtpVerify extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: action,
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.black,
+                      backgroundColor: Colors.black,
                       padding: EdgeInsets.symmetric(vertical: 10.sp),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.sp),
